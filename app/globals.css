@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --cream: #f8f4ec; --charcoal: #1f2933; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--charcoal); }
+::selection { background: #c89b3c; color: #1f2933; }
+:focus-visible { outline: 2px solid #a14b2a; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+
+@layer utilities {
+  .eyebrow { @apply text-[10px] font-semibold uppercase tracking-[0.22em] text-terracotta; }
+  .grain { background-image: radial-gradient(rgba(31,41,51,.13) .55px, transparent .55px); background-size: 6px 6px; }
+  .gold-line { @apply h-px w-10 bg-gold; }
+}
