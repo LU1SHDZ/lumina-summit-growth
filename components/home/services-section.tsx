@@ -1,0 +1,6 @@
+import { SectionHeading } from "@/components/ui/section-heading";
+import { services } from "@/lib/constants";
+
+export function ServicesSection() {
+  return <section id="services" className="px-6 py-28 lg:px-8 lg:py-36"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="What we deliver" title={<>The essential levers.<br />Working together.</>}>We design the customer-acquisition system around your actual constraints, then make every component measurable.</SectionHeading><div className="mt-20 grid border-l border-t border-charcoal/15 md:grid-cols-2 lg:grid-cols-3">{services.map(({ number, title, description, icon: Icon }) => <article key={title} className="group min-h-64 border-b border-r border-charcoal/15 p-7 transition hover:bg-charcoal hover:text-cream"><div className="flex items-start justify-between"><span className="font-display text-2xl text-terracotta group-hover:text-gold">{number}</span><Icon aria-hidden="true" size={21} strokeWidth={1.4} className="text-agave group-hover:text-gold" /></div><h3 className="mt-12 font-display text-3xl leading-none">{title}</h3><p className="mt-4 max-w-[19rem] text-sm leading-6 text-charcoal/65 group-hover:text-cream/70">{description}</p></article>)}</div></div></section>;
+}

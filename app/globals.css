@@ -15,3 +15,8 @@ body { background: var(--cream); color: var(--charcoal); }
   .grain { background-image: radial-gradient(rgba(31,41,51,.13) .55px, transparent .55px); background-size: 6px 6px; }
   .gold-line { @apply h-px w-10 bg-gold; }
 }
+
+.legal-content h2 { margin-top: 2.75rem; font-family: var(--font-cormorant), serif; font-size: 2.25rem; line-height: 1; color: var(--charcoal); }
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p { margin-top: 1rem; font-size: .95rem; line-height: 1.8; }
+.legal-content a { color: #a14b2a; text-decoration: underline; text-underline-offset: 3px; }

@@ -1,42 +1,35 @@
-"use client";
-import { ArrowDownRight, ArrowRight, Check, Play, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { ApproachSection } from "@/components/home/approach-section";
+import { FitSection } from "@/components/home/fit-section";
+import { HeroSection } from "@/components/home/hero-section";
+import { ServicesSection } from "@/components/home/services-section";
+import { FounderSection } from "@/components/home/founder-section";
+import { FeaturedWorkSection } from "@/components/home/featured-work-section";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { industries, services } from "@/lib/constants";
-
-const reveal = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
+import { LandingPageTracker } from "@/components/landing-page-tracker";
 
 export function Homepage() {
-  return <main id="main-content" className="overflow-hidden">
-    <SiteHeader />
-    <section className="relative min-h-[780px] bg-charcoal px-6 pb-20 pt-40 text-cream lg:min-h-[840px] lg:px-8">
-      <div className="grain absolute inset-0 opacity-20" /><div className="absolute -right-36 top-20 h-[33rem] w-[33rem] rounded-full border border-gold/20" /><div className="absolute -right-16 top-32 h-[23rem] w-[23rem] rounded-full border border-terracotta/35" />
-      <div className="relative mx-auto grid max-w-7xl items-end gap-14 lg:grid-cols-[1.35fr_.65fr] lg:pt-28">
-        <motion.div initial="hidden" animate="visible" transition={{ staggerChildren: .12 }}>
-          <motion.div variants={reveal} className="mb-8 flex items-center gap-3"><span className="h-px w-10 bg-gold" /><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-gold">AI-Powered Growth Agency</p></motion.div>
-          <motion.h1 variants={reveal} className="max-w-4xl font-display text-[clamp(4.1rem,9vw,8.5rem)] leading-[.78] tracking-[-.045em]">Build a business<br /><em className="font-normal text-gold">that gets chosen.</em></motion.h1>
-          <motion.p variants={reveal} className="mt-10 max-w-lg text-base leading-7 text-cream/70">We build intelligent growth systems for local service businesses ready to lead their market—not just compete in it.</motion.p>
-          <motion.div variants={reveal} className="mt-10 flex flex-wrap gap-4"><a href="/free-audit" className="group flex items-center gap-3 bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-charcoal transition hover:bg-cream">Start with a growth audit <ArrowRight size={15} className="transition group-hover:translate-x-1" /></a><a href="#approach" className="flex items-center gap-3 border border-cream/25 px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-cream transition hover:border-gold">Our approach <Play size={13} fill="currentColor" /></a></motion.div>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, scale: .95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: .5, duration: .7 }} className="relative border-l border-gold/50 pl-6 lg:mb-5"><p className="font-display text-7xl text-gold">01</p><p className="mt-4 max-w-[15rem] text-sm leading-6 text-cream/65">One growth partner. Every part of the customer journey, connected.</p><div className="mt-10 flex items-center gap-3 text-[10px] uppercase tracking-[.18em] text-cream/60"><Sparkles size={14} className="text-gold" /> Strategy meets intelligence</div></motion.div>
-      </div>
-      <div className="absolute bottom-7 left-6 right-6 mx-auto flex max-w-7xl justify-between text-[10px] font-semibold uppercase tracking-[.2em] text-cream/40 lg:left-8 lg:right-8"><span>Local businesses, elevated</span><a href="#services" className="flex items-center gap-2">Scroll to explore <ArrowDownRight size={14} /></a></div>
-    </section>
-
-    <section className="border-y border-charcoal/10 bg-cream px-6 py-8 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between"><p className="text-xs font-medium uppercase tracking-[.18em] text-charcoal/55">Growth systems built for the trades</p><div className="flex flex-wrap gap-x-8 gap-y-3 font-display text-xl text-charcoal/55"><span>Roofing</span><span>HVAC</span><span>Plumbing</span><span>Construction</span><span>Home Services</span></div></div></section>
-
-    <section id="services" className="px-6 py-28 lg:px-8 lg:py-36"><div className="mx-auto max-w-7xl"><SectionHeading eyebrow="What we build" title={<>Growth that feels<br />inevitable.</>}>Your best work deserves a better system around it. We connect visibility, conversion, and follow-up into one momentum engine.</SectionHeading><div className="mt-20 grid border-l border-t border-charcoal/15 md:grid-cols-2 lg:grid-cols-3">{services.map(({ number, title, description, icon: Icon }) => <article key={title} className="group min-h-64 border-b border-r border-charcoal/15 p-7 transition hover:bg-charcoal hover:text-cream"><div className="flex items-start justify-between"><span className="font-display text-2xl text-terracotta group-hover:text-gold">{number}</span><Icon size={21} strokeWidth={1.4} className="text-agave group-hover:text-gold" /></div><h3 className="mt-12 font-display text-3xl leading-none">{title}</h3><p className="mt-4 max-w-[18rem] text-sm leading-6 text-charcoal/65 group-hover:text-cream/65">{description}</p></article>)}</div></div></section>
-
-    <section id="approach" className="bg-agave px-6 py-28 text-cream lg:px-8 lg:py-36"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2"><SectionHeading inverse eyebrow="The Lumina method" title={<>Craft meets<br />intelligence.</>}>We pair the discipline of a growth consultancy with systems that move at the speed of your opportunity.</SectionHeading><div className="space-y-0">{[["01", "Clarify the summit", "We establish your position, economics, and the few levers with the greatest upside."], ["02", "Build the system", "We create a cohesive path from first search through booked work and repeat business."], ["03", "Compound the gains", "We measure, refine, and automate—with your revenue as the only metric that matters."]].map(([number, title, description]) => <div key={number} className="border-t border-cream/20 py-7"><div className="flex gap-6"><span className="font-display text-2xl text-gold">{number}</span><div><h3 className="font-display text-3xl">{title}</h3><p className="mt-3 max-w-md text-sm leading-6 text-cream/65">{description}</p></div></div></div>)}</div></div></section>
-
-    <section className="relative px-6 py-28 lg:px-8 lg:py-36"><div className="absolute inset-y-0 right-0 w-1/3 bg-[#eee7d9]" /><div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow">Built for your market</p><h2 className="mt-5 font-display text-6xl leading-[.86]">Local expertise.<br /><em className="font-normal text-terracotta">Unfair advantage.</em></h2></div><div className="grid grid-cols-2 border-l border-t border-charcoal/15 sm:grid-cols-4">{industries.map((industry) => <div key={industry} className="flex min-h-32 items-end border-b border-r border-charcoal/15 p-4 text-sm font-medium">{industry}</div>)}</div></div></section>
-
-    <section className="bg-charcoal px-6 py-28 text-cream lg:px-8 lg:py-36"><div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2"><div><p className="eyebrow text-gold">The AI advantage</p><h2 className="mt-5 font-display text-6xl leading-[.86]">No lead should<br />wait for you.</h2></div><div className="border-l border-gold/50 pl-7"><p className="text-xl leading-8 text-cream/75">Your customers expect an answer now. We engineer the invisible infrastructure that responds, qualifies, follows up, and keeps your team focused on the work only humans can do.</p><ul className="mt-10 grid gap-4 text-sm text-cream/75 sm:grid-cols-2">{["24/7 lead response", "Smart intake flows", "Automated follow-up", "Revenue visibility"].map((item) => <li key={item} className="flex items-center gap-3"><Check size={15} className="text-gold" />{item}</li>)}</ul></div></div></section>
-
-    <section id="results" className="px-6 py-28 lg:px-8 lg:py-36"><div className="mx-auto max-w-7xl"><div className="flex flex-col justify-between gap-8 md:flex-row md:items-end"><SectionHeading eyebrow="Proof, in progress" title="The next story could be yours." /><a href="/services" className="group flex w-fit items-center gap-3 border-b border-terracotta pb-2 text-xs font-bold uppercase tracking-[.14em]">Explore services <ArrowRight size={15} className="transition group-hover:translate-x-1" /></a></div><div className="mt-16 grid gap-px bg-charcoal/15 md:grid-cols-3">{["A roofing company’s category-leading launch.", "An HVAC team’s new conversion engine.", "A contractor’s high-trust digital presence."].map((title, i) => <article key={title} className="min-h-72 bg-cream p-7"><span className="eyebrow">Case study / 0{i + 1}</span><h3 className="mt-24 font-display text-3xl leading-none">{title}</h3><p className="mt-4 text-sm text-charcoal/55">Coming soon</p></article>)}</div></div></section>
-
-    <section id="audit" className="bg-terracotta px-6 py-24 text-cream lg:px-8"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_.8fr] lg:items-end"><div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-gold">A clearer path to growth</p><h2 className="mt-5 font-display text-6xl leading-[.84] sm:text-7xl">Your next chapter<br />starts with clarity.</h2></div><div><p className="max-w-md text-base leading-7 text-cream/80">Get a focused view of where opportunity is hiding in your local growth system.</p><a href="/free-audit" className="mt-8 inline-flex items-center gap-3 bg-cream px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-charcoal transition hover:bg-gold">Request your free audit <ArrowRight size={15} /></a></div></div></section>
-    <footer className="bg-charcoal px-6 py-12 text-cream/65 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-end md:justify-between"><div><p className="font-display text-3xl text-cream">Lumina <span className="text-gold">Summit</span></p><p className="mt-3 text-xs leading-5">Growth systems for exceptional local businesses.</p></div><div className="text-xs"><p>© {new Date().getFullYear()} Lumina Summit Growth</p><p className="mt-2 text-cream/35">Built with intention.</p></div></div></footer>
-  </main>;
+  return (
+    <main id="main-content" className="overflow-hidden">
+      <LandingPageTracker pageType="homepage" />
+      <SiteHeader />
+      <HeroSection />
+      <FitSection />
+      <ServicesSection />
+      <ApproachSection />
+      <FounderSection />
+      <section className="bg-charcoal px-6 py-28 text-cream lg:px-8 lg:py-36">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
+          <div><p className="eyebrow text-gold">The operating advantage</p><h2 className="mt-5 font-display text-6xl leading-[.86]">No qualified lead<br />should go cold.</h2></div>
+          <div className="border-l border-gold/50 pl-7"><p className="text-xl leading-8 text-cream/75">We connect your website, lead intake, follow-up, and reporting so opportunity keeps moving—even when your team is in the field.</p><ul className="mt-10 grid gap-4 text-sm text-cream/75 sm:grid-cols-2">{["Faster lead response", "Structured qualification", "Consistent follow-up", "Clear pipeline visibility"].map((item) => <li key={item} className="flex items-center gap-3"><span aria-hidden="true" className="text-gold">✓</span>{item}</li>)}</ul></div>
+        </div>
+      </section>
+      <FeaturedWorkSection />
+      <section id="results" className="px-6 py-28 lg:px-8 lg:py-36">
+        <div className="mx-auto max-w-7xl"><p className="eyebrow">Built around business outcomes</p><div className="mt-6 grid gap-12 lg:grid-cols-[.85fr_1.15fr]"><h2 className="font-display text-6xl leading-[.88]">More clarity.<br />Less marketing noise.</h2><div><p className="max-w-xl text-xl leading-8 text-charcoal/70">Every recommendation must connect to a measurable customer action: stronger visibility, more qualified inquiries, faster response, better close-rate visibility, or greater lifetime value.</p><a href="/services" className="mt-8 inline-flex border-b border-terracotta pb-2 text-xs font-bold uppercase tracking-[.14em]">See every deliverable →</a></div></div></div>
+      </section>
+      <section id="audit" className="bg-terracotta px-6 py-24 text-cream lg:px-8"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_.8fr] lg:items-end"><div><p className="text-xs font-semibold uppercase tracking-[.18em] text-gold">A practical first step</p><h2 className="mt-5 font-display text-6xl leading-[.84] sm:text-7xl">Find the constraint<br />slowing your growth.</h2></div><div><p className="max-w-md text-base leading-7 text-cream/80">Request a focused review of your visibility, conversion path, and lead follow-up. You’ll leave with prioritized next steps—not a generic scorecard.</p><a href="/free-audit" className="mt-8 inline-flex items-center gap-3 bg-cream px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-charcoal transition hover:bg-gold">Request your free audit →</a></div></div></section>
+      <SiteFooter />
+    </main>
+  );
 }

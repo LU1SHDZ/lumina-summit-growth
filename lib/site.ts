@@ -1,11 +1,12 @@
 export const siteConfig = {
   name: "Lumina Summit Growth",
   url: "https://luminasummitgrowth.com",
-  description: "AI-powered growth systems for ambitious local service businesses.",
+  description: "An AI-enabled growth partner helping ambitious local service businesses identify constraints and build stronger customer-acquisition systems.",
   navigation: [
-    { label: "Services", href: "/services" },
-    { label: "Approach", href: "/#approach" },
-    { label: "Results", href: "/#results" },
+    { label: "Start Here", href: "/start-here" },
+    { label: "Roofing", href: "/industries/roofing" },
+    { label: "About", href: "/about" },
+    { label: "Work", href: "/work/dyeslo" },
   ],
 } as const;
 

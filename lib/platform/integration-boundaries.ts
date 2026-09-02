@@ -1,11 +1,12 @@
 /**
- * Intentional integration boundaries for the future SaaS platform.
+ * Intentional integration boundaries for the growth practice.
  * Keep vendor SDKs and secrets behind server-only adapters; never import them into UI components.
  */
 export const integrationBoundaries = {
-  // TODO(CRM): Add a server-side lead submission adapter (HubSpot, GoHighLevel, or equivalent).
-  // TODO(AUTH): Add authenticated client and staff portal boundaries with role-based access.
-  // TODO(ANALYTICS): Add consent-aware product and marketing analytics events.
-  // TODO(DASHBOARD): Add a client reporting API and dashboard route group.
-  // TODO(AI): Add audited, rate-limited AI workflows behind server actions or route handlers.
+  // TODO(CRM): Add a server-side lead adapter only after the founder selects the system of record.
+  // TODO(SCHEDULING): Expose scheduling only after human qualification and provider selection.
+  // TODO(ANALYTICS): Route the canonical event catalog to the founder-approved provider and consent model.
+  // TODO(PROPOSALS): Record proposal lifecycle events through the approved sales workflow.
+  // TODO(PAYMENTS): Reconcile closed clients with an executed agreement and approved payment/accounting system.
+  // TODO(AI): Add audited, rate-limited workflows only where they strengthen a defined human-owned process.
 } as const;
