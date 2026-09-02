@@ -4,8 +4,7 @@ export const siteConfig = {
   description: "An AI-enabled growth partner helping ambitious local service businesses identify constraints and build stronger customer-acquisition systems.",
   navigation: [
     { label: "Start Here", href: "/start-here" },
-    { label: "Roofing", href: "/industries/roofing" },
-    { label: "About", href: "/about" },
+    { label: "Meet the Founder", href: "/#founder" },
     { label: "Work", href: "/work/dyeslo" },
   ],
 } as const;

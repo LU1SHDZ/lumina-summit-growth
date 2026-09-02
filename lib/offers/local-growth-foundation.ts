@@ -45,5 +45,5 @@ export const foundationFaq = [
   { question: "Will you recommend every service Lumina offers?", answer: "No. Service before self means recommending what the evidence supports, including telling a business when it does not need something we could sell." },
   { question: "Does the Sprint include implementation?", answer: "The core working offer culminates in a prioritized roadmap. Implementation scope will be defined separately so the recommendation remains useful even when another team executes it." },
   { question: "How long does it take and what does it cost?", answer: "Those details are intentionally not published yet. Exact duration and pricing depend on founder decisions about scope and delivery capacity; no placeholder number is presented as a promise." },
-  { question: "Is Lumina only for roofing companies?", answer: "No. Lumina is starting with local and home-service businesses while building an architecture that can expand responsibly into other industries over time." },
+  { question: "Is Lumina limited to one industry?", answer: "No. Lumina is beginning with ambitious local and service businesses across several sectors while building an approach that can expand responsibly as the work and evidence develop." },
 ] as const;

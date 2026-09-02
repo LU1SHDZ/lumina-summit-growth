@@ -31,6 +31,10 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+The public experience is available in English and Spanish. Spanish pages use the `/es` prefix, and the persistent EN/ES control keeps visitors on the equivalent route when they switch languages. See `docs/LOCALIZATION.md`.
+
+The public experience is available in English and Spanish. Spanish pages use the `/es` prefix, and the persistent EN/ES control keeps visitors on the equivalent route when they switch languages.
+
 ## Commands
 
 - `npm run dev` — local development server
@@ -55,8 +59,8 @@ Without Resend configuration, lead routes return an honest configuration error a
 ## Project structure
 
 - `app/` — routes, metadata, APIs, sitemap, robots
-- `components/` — shared UI, layouts, homepage sections, forms, industry template
-- `lib/` — offer configuration, qualification validation, audit framework, industry data, analytics event model, integration boundaries
+- `components/` — shared brand UI, layouts, homepage sections, and forms
+- `lib/` — offer configuration, qualification validation, audit framework, analytics event model, and integration boundaries
 - `types/` — shared TypeScript contracts
 - `public/` — public brand and approved portfolio imagery
 - `tests/` — automated validation and security tests
@@ -68,16 +72,17 @@ Without Resend configuration, lead routes return an honest configuration error a
 - `/` — brand and positioning
 - `/start-here` — Local Growth Foundation Sprint commercial offer
 - `/free-audit` — qualification application
-- `/industries/roofing` — first reusable industry implementation
 - `/services` — capability reference
 - `/about` — founder/company presence
 - `/work/dyeslo` — clearly labeled in-development project narrative
 - `/contact` — general inquiry
 - `/privacy` and `/terms` — website legal foundation
+- `/es` and `/es/...` — complete Spanish versions of every public route above
+- `/es` and `/es/...` — complete Spanish versions of every public route above
 
 ## Current project status
 
-Phase 2 establishes the commercial system: offer architecture, qualification application, audit method, Roofing landing page, internal sales workflows, analytics event model, founder decision register, and source-of-truth vision.
+Phase 2 establishes the commercial system: offer architecture, qualification application, audit method, founder-led brand presence, internal sales workflows, analytics event model, founder decision register, and source-of-truth vision.
 
 The following remain deliberately unimplemented pending founder decisions or external integration:
 

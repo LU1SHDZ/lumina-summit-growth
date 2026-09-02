@@ -24,7 +24,7 @@ This register prevents unresolved commercial and operational choices from becomi
 
 1. **Decision required:** Local Georgia launch, a defined regional territory, or national vertical outreach.
 2. **Why it matters:** Shapes proof, prospect lists, partnerships, location content, and founder travel/service expectations.
-3. **Recommended options:** Athens/Atlanta and surrounding Georgia markets; Southeast regional focus; national Roofing-first focus.
+3. **Recommended options:** Athens/Atlanta and surrounding Georgia markets; Southeast regional focus; national home-service focus across selected categories.
 4. **Pros/cons:** Local focus improves trust and learning density but limits volume. Regional broadens opportunity but weakens specificity. National vertical focus scales outreach but raises competition and delivery variance.
 5. **Engineering/product recommendation:** Start with a clearly named Georgia territory unless an existing warm network supports a stronger vertical wedge.
 6. **Blocked implementation:** Location pages, local structured data, outreach lists, market-specific examples, and service-area copy.

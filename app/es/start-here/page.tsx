@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
+import { LandingPageTracker } from "@/components/landing-page-tracker";
+import { foundationFaqEs, localGrowthFoundationEs } from "@/lib/offers/local-growth-foundation.es";
+
+export const metadata: Metadata = {
+  title: "Comienza Aquí | Sprint de Fundamentos de Crecimiento Local",
+  description: "Descubre cómo el Sprint ayuda a negocios de servicios establecidos a identificar limitaciones y construir una hoja de ruta priorizada.",
+  alternates: { canonical: "/es/start-here", languages: { "en-US": "/start-here", "es-US": "/es/start-here" } },
+};
+
+export default function SpanishStartHerePage() {
+  return <main id="main-content" lang="es">
+    <LandingPageTracker pageType="offer" />
+    <section className="relative overflow-hidden bg-charcoal px-6 pb-24 pt-40 text-cream lg:px-8 lg:pb-32"><div className="grain absolute inset-0 opacity-20" /><SiteHeader locale="es"/><div className="relative mx-auto max-w-7xl"><p className="text-xs font-semibold uppercase tracking-[.18em] text-gold">La oferta inicial de trabajo</p><h1 className="mt-6 max-w-5xl font-display text-6xl leading-[.82] tracking-[-.04em] sm:text-8xl">Sprint de Fundamentos<br /><em className="font-normal text-gold">de Crecimiento Local.</em></h1><p className="mt-9 max-w-2xl text-lg leading-8 text-cream/70">{localGrowthFoundationEs.summary}</p><div className="mt-10 flex flex-wrap gap-4"><Link href="/es/free-audit" className="bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-charcoal hover:bg-cream">Solicita una auditoría →</Link><a href="#fit" className="border border-cream/25 px-6 py-4 text-xs font-bold uppercase tracking-[.14em] hover:border-gold">Revisa la compatibilidad</a></div></div></section>
+
+    <section id="fit" className="px-6 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2"><div><p className="eyebrow">Para quién es</p><h2 className="mt-5 font-display text-6xl leading-[.88]">Una base para negocios preparados para ver todo el sistema.</h2><p className="mt-7 max-w-xl text-base leading-7 text-charcoal/70">El Sprint está diseñado para operadores que quieren una visión honesta de dónde se pierde la oportunidad antes de comprometerse con más tácticas, herramientas o publicidad.</p></div><ul className="divide-y divide-charcoal/15 border-t border-charcoal/15">{localGrowthFoundationEs.fitSignals.map((signal, index)=><li key={signal} className="flex gap-5 py-5 text-sm leading-6 text-charcoal/75"><span className="font-display text-2xl text-terracotta">0{index+1}</span>{signal}</li>)}</ul></div></section>
+
+    <section className="bg-[#eee7d9] px-6 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><p className="eyebrow">Lo que evaluamos</p><div className="mt-8 grid border-l border-t border-charcoal/15 sm:grid-cols-2 lg:grid-cols-3">{localGrowthFoundationEs.evaluationAreas.map((area,index)=><article key={area} className="min-h-44 border-b border-r border-charcoal/15 p-6"><span className="font-display text-2xl text-terracotta">0{index+1}</span><h2 className="mt-10 font-display text-3xl leading-none">{area}</h2></article>)}</div></div></section>
+
+    <section className="bg-agave px-6 py-24 text-cream lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[.65fr_1.35fr]"><div><p className="text-xs font-semibold uppercase tracking-[.18em] text-gold">El proceso</p><h2 className="mt-5 font-display text-6xl leading-[.88]">Escuchar primero.<br />Luego iluminar el camino.</h2></div><div>{localGrowthFoundationEs.process.map((phase)=><article key={phase.number} className="grid gap-4 border-t border-cream/20 py-7 sm:grid-cols-[.12fr_.3fr_.58fr]"><span className="font-display text-2xl text-gold">{phase.number}</span><h3 className="font-display text-3xl">{phase.title}</h3><p className="text-sm leading-6 text-cream/70">{phase.description}</p></article>)}</div></div></section>
+
+    <section className="px-6 py-24 lg:px-8 lg:py-32"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2"><div><p className="eyebrow">Entregables esperados</p><h2 className="mt-5 font-display text-6xl leading-[.88]">Evidencia, prioridades y una hoja de ruta que tu equipo puede usar.</h2></div><ul className="space-y-4">{localGrowthFoundationEs.deliverables.map((item)=><li key={item} className="flex gap-4 border-l-2 border-gold bg-[#eee7d9] p-5 text-sm leading-6 text-charcoal/75"><span aria-hidden="true">✓</span>{item}</li>)}</ul></div></section>
+
+    <section className="bg-charcoal px-6 py-24 text-cream lg:px-8"><div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-2"><div><p className="text-xs font-semibold uppercase tracking-[.18em] text-gold">Quién podría no ser compatible</p><h2 className="mt-5 font-display text-5xl leading-[.9]">Un compromiso útil requiere honestidad de ambas partes.</h2></div><ul className="divide-y divide-cream/15 border-t border-cream/15">{localGrowthFoundationEs.poorFitSignals.map((signal)=><li key={signal} className="py-5 text-sm leading-6 text-cream/70">{signal}</li>)}</ul></div></section>
+
+    <section className="px-6 py-24 lg:px-8"><div className="mx-auto max-w-7xl"><p className="eyebrow">Qué sucede después</p><div className="mt-8 grid gap-px bg-charcoal/15 md:grid-cols-3">{localGrowthFoundationEs.afterSprint.map((path,index)=><article key={path} className="min-h-52 bg-cream p-7"><span className="font-display text-2xl text-terracotta">0{index+1}</span><p className="mt-12 text-base leading-7 text-charcoal/75">{path}</p></article>)}</div><p className="mt-8 max-w-2xl text-sm leading-6 text-charcoal/60">La hoja de ruta debe conservar su valor aunque Lumina no sea seleccionada para la implementación. Cualquier fase posterior se define y acuerda por separado.</p></div></section>
+
+    <section className="bg-[#eee7d9] px-6 py-24 lg:px-8"><div className="mx-auto max-w-4xl"><p className="eyebrow">Preguntas frecuentes</p><h2 className="mt-5 font-display text-6xl">Antes de solicitar.</h2><div className="mt-10 divide-y divide-charcoal/15 border-y border-charcoal/15">{foundationFaqEs.map((item)=><details key={item.question} className="group py-6"><summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-display text-2xl"><span>{item.question}</span><span aria-hidden="true" className="text-terracotta group-open:rotate-45">+</span></summary><p className="mt-4 max-w-2xl text-sm leading-7 text-charcoal/70">{item.answer}</p></details>)}</div></div></section>
+
+    <section className="bg-terracotta px-6 py-20 text-cream lg:px-8"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-end"><div><p className="text-xs font-semibold uppercase tracking-[.18em] text-gold">Comienza con compatibilidad, no con un discurso</p><h2 className="mt-4 font-display text-6xl leading-[.88]">Muéstranos dónde se detiene el crecimiento.</h2></div><Link href="/es/free-audit" className="inline-flex bg-cream px-6 py-4 text-xs font-bold uppercase tracking-[.14em] text-charcoal hover:bg-gold">Solicita una auditoría →</Link></div></section>
+    <SiteFooter locale="es"/>
+  </main>;
+}

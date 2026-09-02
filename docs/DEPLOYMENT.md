@@ -19,7 +19,7 @@ The audit form deliberately returns HTTP 503 when email delivery is not configur
 ## Verification checklist
 
 1. Run `npm run check` locally.
-2. Create a preview deployment and inspect `/`, `/start-here`, `/industries/roofing`, `/free-audit`, `/services`, `/about`, `/work/dyeslo`, `/contact`, `/privacy`, and `/terms` on desktop and mobile.
+2. Create a preview deployment and inspect `/`, `/start-here`, `/free-audit`, `/services`, `/about`, `/work/dyeslo`, `/contact`, `/privacy`, and `/terms` on desktop and mobile.
 3. Submit a test audit request and verify inbox delivery, reply-to behavior, and the success state.
 4. Confirm `landing_page_view`, `audit_form_started`, `audit_form_submitted`, and `audit_form_error` in platform logs and in the chosen analytics provider when configured.
 5. Confirm `/robots.txt` and `/sitemap.xml` use the production domain.
