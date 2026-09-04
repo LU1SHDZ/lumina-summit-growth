@@ -6,12 +6,14 @@ import { localizedPath } from "@/lib/i18n";
 
 const footerLinks = {
   en: [
-    { label: "Start Here", href: "/start-here" }, { label: "Meet the Founder", href: "/#founder" },
-    { label: "Work", href: "/work/dyeslo" }, { label: "Contact", href: "/contact" }, { label: "Privacy", href: "/privacy" }, { label: "Terms", href: "/terms" },
+    { label: "Start Here", href: "/start-here" }, { label: "Services", href: "/services" },
+    { label: "About", href: "/about" }, { label: "Work", href: "/work/dyeslo" },
+    { label: "Contact", href: "/contact" }, { label: "Privacy", href: "/privacy" }, { label: "Terms", href: "/terms" },
   ],
   es: [
-    { label: "Comienza Aquí", href: "/start-here" }, { label: "Conoce al Fundador", href: "/#founder" },
-    { label: "Trabajo", href: "/work/dyeslo" }, { label: "Contacto", href: "/contact" }, { label: "Privacidad", href: "/privacy" }, { label: "Términos", href: "/terms" },
+    { label: "Comienza Aquí", href: "/start-here" }, { label: "Servicios", href: "/services" },
+    { label: "Nosotros", href: "/about" }, { label: "Trabajo", href: "/work/dyeslo" },
+    { label: "Contacto", href: "/contact" }, { label: "Privacidad", href: "/privacy" }, { label: "Términos", href: "/terms" },
   ],
 } as const;
 
