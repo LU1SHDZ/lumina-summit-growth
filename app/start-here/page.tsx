@@ -9,6 +9,7 @@ import { OfferQuickNav } from "@/components/offer/offer-quick-nav";
 export const metadata: Metadata = {
   title: "Start Here | Local Growth Foundation Sprint",
   description: "See how the Local Growth Foundation Sprint helps established service businesses identify growth constraints and build a prioritized roadmap.",
+  alternates: { canonical: "/start-here", languages: { "en-US": "/start-here", "es-US": "/es/start-here", "x-default": "/start-here" } },
 };
 
 export default function StartHerePage() {

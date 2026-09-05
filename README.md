@@ -4,7 +4,7 @@ Lumina Summit Growth is a founder-led, AI-enabled growth company initially servi
 
 The current working offer is the **Local Growth Foundation Sprint**, a consultative diagnostic that identifies customer-acquisition and conversion constraints and culminates in an evidence-backed, prioritized growth roadmap.
 
-Read `VISION.md` for company direction and `FOUNDER_DECISIONS.md` before implementing unresolved commercial or vendor choices.
+Read `VISION.md` for company direction, `FOUNDER_DECISIONS.md` before implementing unresolved commercial or vendor choices, and `docs/LAUNCH_CHECKLIST.md` before publishing the site.
 
 ## Technology stack
 
@@ -32,8 +32,6 @@ npm run dev
 Open `http://localhost:3000`.
 
 The public experience is available in English and Spanish. Spanish pages use the `/es` prefix, and the persistent EN/ES control keeps visitors on the equivalent route when they switch languages. See `docs/LOCALIZATION.md`.
-
-The public experience is available in English and Spanish. Spanish pages use the `/es` prefix, and the persistent EN/ES control keeps visitors on the equivalent route when they switch languages.
 
 ## Commands
 
@@ -77,7 +75,6 @@ Without Resend configuration, lead routes return an honest configuration error a
 - `/work/dyeslo` — clearly labeled in-development project narrative
 - `/contact` — general inquiry
 - `/privacy` and `/terms` — website legal foundation
-- `/es` and `/es/...` — complete Spanish versions of every public route above
 - `/es` and `/es/...` — complete Spanish versions of every public route above
 
 ## Current project status

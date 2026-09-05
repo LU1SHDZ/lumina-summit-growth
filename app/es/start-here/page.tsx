@@ -9,7 +9,7 @@ import { OfferQuickNav } from "@/components/offer/offer-quick-nav";
 export const metadata: Metadata = {
   title: "Comienza Aquí | Sprint de Fundamentos de Crecimiento Local",
   description: "Descubre cómo el Sprint ayuda a negocios de servicios establecidos a identificar limitaciones y construir una hoja de ruta priorizada.",
-  alternates: { canonical: "/es/start-here", languages: { "en-US": "/start-here", "es-US": "/es/start-here" } },
+  alternates: { canonical: "/es/start-here", languages: { "en-US": "/start-here", "es-US": "/es/start-here", "x-default": "/start-here" } },
 };
 
 export default function SpanishStartHerePage() {

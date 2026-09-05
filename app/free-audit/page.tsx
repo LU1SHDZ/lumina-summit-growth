@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 export const metadata: Metadata = {
   title: "Growth Audit Application",
   description: "Apply for a focused review of your local-service business growth system.",
+  alternates: { canonical: "/free-audit", languages: { "en-US": "/free-audit", "es-US": "/es/free-audit", "x-default": "/free-audit" } },
 };
 
 export default function FreeAuditPage() {

@@ -4,6 +4,8 @@ This register prevents unresolved commercial and operational choices from becomi
 
 ## 1. Initial pricing
 
+**Status:** Founder testing in progress. No price is approved for public display.
+
 1. **Decision required:** Pricing model and investment for the Local Growth Foundation Sprint.
 2. **Why it matters:** Determines qualification, sales expectations, scope discipline, capacity, and public offer copy.
 3. **Recommended options:** Fixed fee after a consistent scope; tiered fixed fee by business complexity; paid diagnostic credited toward later implementation.

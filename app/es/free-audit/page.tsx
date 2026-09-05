@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 export const metadata: Metadata = {
   title: "Solicitud de Auditoría de Crecimiento",
   description: "Solicita una revisión enfocada del sistema de crecimiento de tu negocio local de servicios.",
-  alternates: { canonical: "/es/free-audit", languages: { "en-US": "/free-audit", "es-US": "/es/free-audit" } },
+  alternates: { canonical: "/es/free-audit", languages: { "en-US": "/free-audit", "es-US": "/es/free-audit", "x-default": "/free-audit" } },
 };
 
 export default function SpanishFreeAuditPage() {

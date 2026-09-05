@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "An in-development digital storefront and brand-storytelling project for Athens maker D’Yeslo.",
   alternates: {
     canonical: "/work/dyeslo",
-    languages: { "en-US": "/work/dyeslo", "es-US": "/es/work/dyeslo" },
+    languages: { "en-US": "/work/dyeslo", "es-US": "/es/work/dyeslo", "x-default": "/work/dyeslo" },
   },
 };
 

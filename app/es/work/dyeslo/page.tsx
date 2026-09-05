@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Una tienda digital y proyecto de narrativa de marca en desarrollo para la artista de Athens D’Yeslo.",
   alternates: {
     canonical: "/es/work/dyeslo",
-    languages: { "en-US": "/work/dyeslo", "es-US": "/es/work/dyeslo" },
+    languages: { "en-US": "/work/dyeslo", "es-US": "/es/work/dyeslo", "x-default": "/work/dyeslo" },
   },
 };
 

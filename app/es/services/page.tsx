@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { LinkButton } from "@/components/ui/link-button";
 import { services } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Servicios de Crecimiento para Negocios Locales", description: "Búsqueda local, sitios web, automatización, demanda pagada, CRM y estrategia de crecimiento para negocios de servicios.", alternates: { canonical: "/es/services", languages: { "en-US": "/services", "es-US": "/es/services" } } };
+export const metadata: Metadata = { title: "Servicios de Crecimiento para Negocios Locales", description: "Búsqueda local, sitios web, automatización, demanda pagada, CRM y estrategia de crecimiento para negocios de servicios.", alternates: { canonical: "/es/services", languages: { "en-US": "/services", "es-US": "/es/services", "x-default": "/services" } } };
 
 const cards = [
   ["Presencia en Búsqueda Local", "Aparece en los momentos en que tu mercado busca, desde mapas hasta resultados orgánicos."], ["Sitios Web de Conversión", "Experiencias digitales de alta confianza diseñadas para generar acción."],

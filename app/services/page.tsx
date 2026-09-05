@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { LinkButton } from "@/components/ui/link-button";
 import { services } from "@/lib/constants";
 
-export const metadata: Metadata = { title: "Growth Services for Local Businesses", description: "Local SEO, websites, AI automation, paid demand, CRM systems, and growth strategy for service businesses." };
+export const metadata: Metadata = { title: "Growth Services for Local Businesses", description: "Local SEO, websites, AI automation, paid demand, CRM systems, and growth strategy for service businesses.", alternates: { canonical: "/services", languages: { "en-US": "/services", "es-US": "/es/services", "x-default": "/services" } } };
 
 const details = [
   ["Google Business Profile Optimization", "Be the obvious local choice across Maps, local packs, and the moments buyers are ready to act."],
