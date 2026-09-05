@@ -15,13 +15,29 @@ test("accepts and normalizes a valid audit request", () => {
   if (result.success) assert.equal(result.data.email, "luis@example.com");
 });
 
+test("accepts a streamlined application when optional qualification details are blank", () => {
+  const result = validateAuditRequest({
+    ...valid,
+    phone: "",
+    website: "",
+    gbp: "",
+    teamSize: "",
+    currentLeadSources: [],
+    marketingInvestment: "",
+    desiredTimeline: "",
+    decisionMakerStatus: "",
+    goals: "",
+  });
+  assert.equal(result.success, true);
+});
+
 test("rejects missing consent and malformed fields", () => {
   const result = validateAuditRequest({ ...valid, email: "invalid", website: "example", goals: "short", consent: false });
   assert.equal(result.success, false);
   if (!result.success) assert.deepEqual(Object.keys(result.errors).sort(), ["consent", "email", "goals", "website"]);
 });
 
-test("rejects unknown qualification options and requires a lead source", () => {
+test("rejects unknown qualification options and lead sources", () => {
   const result = validateAuditRequest({ ...valid, serviceCategory: "Guaranteed rankings", teamSize: "Huge", currentLeadSources: ["Injected source"], marketingInvestment: "Secret", desiredTimeline: "Yesterday", decisionMakerStatus: "Unknown" });
   assert.equal(result.success, false);
   if (!result.success) assert.deepEqual(Object.keys(result.errors).sort(), ["currentLeadSources", "decisionMakerStatus", "desiredTimeline", "marketingInvestment", "serviceCategory", "teamSize"]);

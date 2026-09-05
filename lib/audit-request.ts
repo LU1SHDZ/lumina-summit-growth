@@ -28,6 +28,7 @@ const isOption = (value: string, options: readonly string[]) => options.includes
 
 export function validateAuditRequest(input: unknown): ValidationResult {
   const source = typeof input === "object" && input !== null ? input as Record<string, unknown> : {};
+  const rawLeadSources = Array.isArray(source.currentLeadSources) ? source.currentLeadSources : [];
   const data: AuditRequest = {
     name: clean(source.name, 100), company: clean(source.company, 120), email: clean(source.email, 160).toLowerCase(), phone: clean(source.phone, 40),
     website: clean(source.website, 300), gbp: clean(source.gbp, 300), serviceCategory: clean(source.serviceCategory, 80), primaryMarket: clean(source.primaryMarket, 160),
@@ -43,13 +44,13 @@ export function validateAuditRequest(input: unknown): ValidationResult {
   if (!isUrl(data.gbp)) errors.gbp = "Use a complete Google Business Profile URL.";
   if (!isOption(data.serviceCategory, serviceCategories)) errors.serviceCategory = "Select the service category that best fits.";
   if (data.primaryMarket.length < 2) errors.primaryMarket = "Enter the primary city, region, or service market.";
-  if (!isOption(data.teamSize, teamSizes)) errors.teamSize = "Select an approximate team size.";
-  if (!data.currentLeadSources.length) errors.currentLeadSources = "Select at least one current lead source.";
-  if (!isOption(data.marketingInvestment, marketingInvestmentRanges)) errors.marketingInvestment = "Select the closest investment range.";
+  if (data.teamSize && !isOption(data.teamSize, teamSizes)) errors.teamSize = "Select a valid team size or leave it blank.";
+  if (rawLeadSources.some((item) => typeof item !== "string" || !isOption(item, leadSources))) errors.currentLeadSources = "Review the selected lead sources.";
+  if (data.marketingInvestment && !isOption(data.marketingInvestment, marketingInvestmentRanges)) errors.marketingInvestment = "Select a valid investment range or leave it blank.";
   if (data.biggestConstraint.length < 20) errors.biggestConstraint = "Share at least a sentence about the biggest growth constraint.";
-  if (!isOption(data.desiredTimeline, desiredTimelines)) errors.desiredTimeline = "Select the timeline that best reflects your plans.";
-  if (!isOption(data.decisionMakerStatus, decisionMakerStatuses)) errors.decisionMakerStatus = "Select your role in the decision.";
-  if (data.goals.length < 20) errors.goals = "Please share at least a sentence about your goals.";
+  if (data.desiredTimeline && !isOption(data.desiredTimeline, desiredTimelines)) errors.desiredTimeline = "Select a valid timeline or leave it blank.";
+  if (data.decisionMakerStatus && !isOption(data.decisionMakerStatus, decisionMakerStatuses)) errors.decisionMakerStatus = "Select a valid role or leave it blank.";
+  if (data.goals && data.goals.length < 20) errors.goals = "Please share at least a sentence or leave this field blank.";
   if (!data.consent) errors.consent = "Please confirm that we may contact you about this request.";
   return Object.keys(errors).length ? { success: false, errors } : { success: true, data };
 }
