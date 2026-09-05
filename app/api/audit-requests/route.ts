@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Online requests are being configured. Please contact Lumina Summit Growth directly for now." }, { status: 503 });
     }
 
-    const response = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: sender, to: [recipient], reply_to: result.data.email, subject: `Growth audit request — ${result.data.company}`, html: auditRequestEmail(result.data) }) });
+    const response = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: sender, to: [recipient], reply_to: result.data.email, subject: `Growth Snapshot request — ${result.data.company}`, html: auditRequestEmail(result.data) }) });
     if (!response.ok) throw new Error(`Resend delivery failed with status ${response.status}`);
     console.info(JSON.stringify({ event: "audit_request_delivered", timestamp: new Date().toISOString() }));
     return NextResponse.json({ ok: true });

@@ -2,7 +2,7 @@
 
 Lumina Summit Growth is a founder-led, AI-enabled growth company initially serving established local and home-service businesses. The application is being built as commercial and delivery infrastructure—not only a marketing website.
 
-The current working offer is the **Local Growth Foundation Sprint**, a consultative diagnostic that identifies customer-acquisition and conversion constraints and culminates in an evidence-backed, prioritized growth roadmap.
+The current commercial system begins with a free **Growth Snapshot**, moves into a $350 **Growth Blueprint**, and then leads to focused implementation through the **Local Growth Foundation** or **Growth Website System**. Qualified clients can continue with **Local Growth** or a broader **Growth Partner** relationship. Public prices are starting points, not promises of a one-size-fits-all scope.
 
 Read `VISION.md` for company direction, `FOUNDER_DECISIONS.md` before implementing unresolved commercial or vendor choices, and `docs/LAUNCH_CHECKLIST.md` before publishing the site.
 
@@ -58,7 +58,7 @@ Without Resend configuration, lead routes return an honest configuration error a
 
 - `app/` — routes, metadata, APIs, sitemap, robots
 - `components/` — shared brand UI, layouts, homepage sections, and forms
-- `lib/` — offer configuration, qualification validation, audit framework, analytics event model, and integration boundaries
+- `lib/` — centralized service/pricing configuration, qualification validation, audit framework, analytics event model, and integration boundaries
 - `types/` — shared TypeScript contracts
 - `public/` — public brand and approved portfolio imagery
 - `tests/` — automated validation and security tests
@@ -68,9 +68,9 @@ Without Resend configuration, lead routes return an honest configuration error a
 ## Current routes
 
 - `/` — brand and positioning
-- `/start-here` — Local Growth Foundation Sprint commercial offer
-- `/free-audit` — qualification application
-- `/services` — capability reference
+- `/start-here` — Local Growth Foundation commercial offer
+- `/free-audit` — free Growth Snapshot request and qualification application
+- `/services` — complete service ladder, starting prices, fit guidance, and FAQ
 - `/about` — founder/company presence
 - `/work/dyeslo` — clearly labeled in-development project narrative
 - `/contact` — general inquiry
@@ -81,16 +81,16 @@ Without Resend configuration, lead routes return an honest configuration error a
 
 Phase 2 establishes the commercial system: offer architecture, qualification application, audit method, founder-led brand presence, internal sales workflows, analytics event model, founder decision register, and source-of-truth vision.
 
-The following remain deliberately unimplemented pending founder decisions or external integration:
+The six-offer ladder and public starting prices are approved and implemented. The following remain deliberately unimplemented pending founder decisions or external integration:
 
-- final Sprint price and duration;
+- exact project durations, deposits, payment schedules, and detailed scope boundaries;
 - automatic qualification and scheduling;
 - CRM synchronization;
 - proposal/contract workflow;
 - payment collection;
 - production analytics provider and consent model;
 - offline funnel reconciliation;
-- ongoing-retainer packages.
+- finalized recurring-service cadence, capacity rules, and service-level expectations.
 
 Do not implement these by assumption. Update `FOUNDER_DECISIONS.md`, then modify the relevant provider boundary.
 

@@ -15,10 +15,10 @@ export default function NotFound() {
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">The path ends here / El camino termina aquí</p>
             <h1 className="mt-5 text-pretty font-display text-5xl leading-[0.86] sm:text-7xl">Let’s get you back on the right route.</h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-cream/65">This page may have moved or the address may be incomplete. Return home, explore the Foundation Sprint, or continue in Spanish.</p>
+            <p className="mt-7 max-w-xl text-base leading-7 text-cream/65">This page may have moved or the address may be incomplete. Return home, explore the Local Growth Foundation, or continue in Spanish.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/" className="inline-flex min-h-12 items-center justify-center bg-gold px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-charcoal transition hover:bg-cream">Return home →</Link>
-              <Link href="/start-here" className="inline-flex min-h-12 items-center justify-center border border-cream/25 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] transition hover:border-gold hover:text-gold">Explore the Sprint</Link>
+              <Link href="/start-here" className="inline-flex min-h-12 items-center justify-center border border-cream/25 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] transition hover:border-gold hover:text-gold">Explore the Foundation</Link>
               <Link href="/es" lang="es" className="inline-flex min-h-12 items-center justify-center border border-cream/25 px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] transition hover:border-gold hover:text-gold">Continuar en español</Link>
             </div>
           </div>

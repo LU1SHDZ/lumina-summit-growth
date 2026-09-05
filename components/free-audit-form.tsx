@@ -171,7 +171,7 @@ export function FreeAuditForm({ locale = "en" }: { locale?: Locale }) {
     return (
       <div role="status" className="flex min-h-[32rem] flex-col justify-center border border-charcoal/15 bg-cream p-8 shadow-[10px_10px_0_#C89B3C] sm:p-12">
         <CheckCircle2 size={42} className="text-terracotta" />
-        <p className="mt-8 eyebrow">{spanish ? "Solicitud recibida" : "Application received"}</p>
+        <p className="mt-8 eyebrow">{spanish ? "Solicitud de diagnóstico recibida" : "Growth Snapshot request received"}</p>
         <h2 className="mt-4 font-display text-5xl leading-[.9]">{spanish ? "Gracias por compartir el contexto." : "Thank you for the context."}</h2>
         <p className="mt-6 max-w-md text-sm leading-6 text-charcoal/65">{spanish ? "Revisaremos la compatibilidad y responderemos usando el correo electrónico que proporcionaste. Enviar la solicitud no crea un compromiso ni obliga a ninguna de las partes a continuar." : "We’ll review the fit and follow up using the email you provided. Submitting the application does not create an engagement or obligate either side to proceed."}</p>
       </div>
@@ -252,7 +252,7 @@ export function FreeAuditForm({ locale = "en" }: { locale?: Locale }) {
             <SelectField id="decisionMakerStatus" title={spanish ? "Participación en la decisión" : "Decision-making role"} options={decisionMakerStatuses} displayedOptions={spanish ? optionTranslations.decisionMakerStatuses : undefined} error={errors.decisionMakerStatus} locale={locale} />
           </div>
 
-          <label className="mt-8 flex cursor-pointer items-start gap-3 border border-charcoal/15 bg-white/45 p-4 text-xs leading-5 text-charcoal/65"><input name="consent" type="checkbox" required className="mt-0.5 h-4 w-4 shrink-0 accent-terracotta" /><span>{spanish ? "Acepto que Lumina Summit Growth me contacte sobre esta solicitud. *" : "I agree that Lumina Summit Growth may contact me about this application. *"}</span></label>
+          <label className="mt-8 flex cursor-pointer items-start gap-3 border border-charcoal/15 bg-white/45 p-4 text-xs leading-5 text-charcoal/65"><input name="consent" type="checkbox" required className="mt-0.5 h-4 w-4 shrink-0 accent-terracotta" /><span>{spanish ? "Acepto que Lumina Summit Growth me contacte sobre esta solicitud. *" : "I agree that Lumina Summit Growth may contact me about this request. *"}</span></label>
           <FieldError id="consent" message={errors.consent} />
         </section>
 
@@ -260,7 +260,7 @@ export function FreeAuditForm({ locale = "en" }: { locale?: Locale }) {
 
         <div className="mt-9 flex items-center justify-between gap-3 border-t border-charcoal/10 pt-6">
           {step > 1 ? <button type="button" onClick={previousStep} className="inline-flex min-h-12 items-center gap-2 px-2 text-xs font-bold uppercase tracking-[0.13em] text-charcoal/60 transition hover:text-terracotta"><ArrowLeft aria-hidden="true" size={15} />{spanish ? "Atrás" : "Back"}</button> : <span />}
-          {step < 3 ? <button type="button" onClick={nextStep} className="inline-flex min-h-12 items-center justify-center gap-3 bg-charcoal px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-cream transition hover:bg-terracotta">{spanish ? "Continuar" : "Continue"}<ArrowRight aria-hidden="true" size={15} /></button> : <button disabled={loading} className="inline-flex min-h-12 items-center justify-center gap-3 bg-charcoal px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-cream transition hover:bg-terracotta disabled:cursor-wait disabled:opacity-70">{loading ? <><LoaderCircle aria-hidden="true" size={15} className="animate-spin" />{spanish ? "Enviando" : "Sending"}</> : <>{spanish ? "Enviar solicitud" : "Submit application"}<ArrowRight aria-hidden="true" size={15} /></>}</button>}
+          {step < 3 ? <button type="button" onClick={nextStep} className="inline-flex min-h-12 items-center justify-center gap-3 bg-charcoal px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-cream transition hover:bg-terracotta">{spanish ? "Continuar" : "Continue"}<ArrowRight aria-hidden="true" size={15} /></button> : <button disabled={loading} className="inline-flex min-h-12 items-center justify-center gap-3 bg-charcoal px-6 py-4 text-xs font-bold uppercase tracking-[0.14em] text-cream transition hover:bg-terracotta disabled:cursor-wait disabled:opacity-70">{loading ? <><LoaderCircle aria-hidden="true" size={15} className="animate-spin" />{spanish ? "Enviando" : "Sending"}</> : <>{spanish ? "Solicitar diagnóstico" : "Request my snapshot"}<ArrowRight aria-hidden="true" size={15} /></>}</button>}
         </div>
       </div>
     </form>

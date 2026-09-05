@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Lumina Growth Audit is an evolving diagnostic framework for understanding where a business may be losing customer-acquisition or conversion opportunities. It supports the Local Growth Foundation Sprint and creates a consistent structure for evidence, judgment, recommendations, and later measurement.
+The Lumina Growth Audit is an evolving diagnostic framework for understanding where a business may be losing customer-acquisition or conversion opportunities. It supports the paid Growth Blueprint, informs Foundation and Website project planning, and creates a consistent structure for evidence, judgment, recommendations, and later measurement.
 
 It is not a scientifically validated scoring model, an automatic business grade, or a guarantee of performance. Human judgment and business context remain essential.
 
@@ -78,4 +78,4 @@ Before presenting an audit:
 
 ## Evolution
 
-After each Sprint, record which evidence was useful, which questions were ambiguous, which recommendations were implemented, and what outcomes became observable. Changes to the framework should be versioned in Git and summarized in the audit changelog before the framework is treated as standardized.
+After each diagnostic or implementation project, record which evidence was useful, which questions were ambiguous, which recommendations were implemented, and what outcomes became observable. Changes to the framework should be versioned in Git and summarized in the audit changelog before the framework is treated as standardized.

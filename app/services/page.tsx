@@ -1,21 +1,12 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
-import { SiteHeader } from "@/components/layout/site-header";
-import { SiteFooter } from "@/components/layout/site-footer";
-import { LinkButton } from "@/components/ui/link-button";
-import { services } from "@/lib/constants";
+import { ServicesPricingPage } from "@/components/services/services-pricing-page";
 
-export const metadata: Metadata = { title: "Growth Services for Local Businesses", description: "Local SEO, websites, AI automation, paid demand, CRM systems, and growth strategy for service businesses.", alternates: { canonical: "/services", languages: { "en-US": "/services", "es-US": "/es/services", "x-default": "/services" } } };
+export const metadata: Metadata = {
+  title: "Services and Pricing for Local Business Growth",
+  description: "Transparent starting prices for Lumina growth diagnostics, local SEO foundations, conversion-focused websites, and ongoing growth partnerships.",
+  alternates: { canonical: "/services", languages: { "en-US": "/services", "es-US": "/es/services", "x-default": "/services" } },
+};
 
-const details = [
-  ["Google Business Profile Optimization", "Be the obvious local choice across Maps, local packs, and the moments buyers are ready to act."],
-  ["Local SEO", "Build durable local authority, category relevance, and search visibility that compounds over time."],
-  ["Website Design", "A high-trust digital presence designed around how your buyers decide—not a generic brochure."],
-  ["Landing Pages", "Focused campaign destinations that turn paid attention into qualified conversations."],
-  ["Meta Ads", "Disciplined creative, targeting, and measurement for predictable demand generation."],
-  ["AI Automation", "Responsive lead handling and operational intelligence that keeps opportunity moving."],
-  ["CRM Systems", "A clear system of record for leads, follow-up, pipeline visibility, and team accountability."],
-  ["Business Growth Strategy", "The practical decisions, priorities, and operating rhythm required to scale profitably."],
-];
-
-export default function ServicesPage() { return <main id="main-content"><section className="relative overflow-hidden bg-charcoal px-6 pb-24 pt-40 text-cream lg:px-8 lg:pb-32"><div className="grain absolute inset-0 opacity-20" /><SiteHeader /><div className="relative mx-auto max-w-7xl"><p className="eyebrow text-gold">The Lumina growth system</p><h1 className="mt-6 max-w-5xl font-display text-6xl leading-[.8] tracking-[-.04em] sm:text-8xl">Every lever.<br /><em className="font-normal text-gold">One direction.</em></h1><p className="mt-9 max-w-xl text-base leading-7 text-cream/70">We bring the fragmented parts of local growth into a deliberate, connected system built around your revenue goals.</p></div></section><section className="px-6 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><div className="grid border-l border-t border-charcoal/15 md:grid-cols-2 lg:grid-cols-3">{services.map(({ number, title, description, icon: Icon }) => <article key={title} className="min-h-60 border-b border-r border-charcoal/15 p-7"><div className="flex items-start justify-between"><span className="font-display text-2xl text-terracotta">{number}</span><Icon size={21} className="text-agave" strokeWidth={1.4} /></div><h2 className="mt-12 font-display text-3xl leading-none">{title}</h2><p className="mt-4 text-sm leading-6 text-charcoal/65">{description}</p></article>)}</div></div></section><section className="bg-[#eee7d9] px-6 py-24 lg:px-8 lg:py-32"><div className="mx-auto max-w-7xl"><p className="eyebrow">How we help</p><div className="mt-10 divide-y divide-charcoal/15">{details.map(([title, description], index) => <article key={title} className="grid gap-5 py-7 md:grid-cols-[.12fr_.88fr] lg:grid-cols-[.1fr_.45fr_.45fr]"><span className="font-display text-2xl text-terracotta">0{index + 1}</span><h2 className="font-display text-3xl leading-none">{title}</h2><p className="max-w-md text-sm leading-6 text-charcoal/65">{description}</p></article>)}</div></div></section><section className="px-6 py-24 lg:px-8"><div className="mx-auto grid max-w-7xl gap-10 bg-agave p-8 text-cream sm:p-12 lg:grid-cols-[1fr_.7fr] lg:items-end"><div><p className="eyebrow text-gold">Begin with clarity</p><h2 className="mt-5 font-display text-5xl leading-[.85] sm:text-6xl">Not sure where to begin?</h2><p className="mt-6 max-w-lg text-sm leading-6 text-cream/70">We’ll identify the growth constraints worth solving first—before recommending tactics.</p></div><div className="lg:justify-self-end"><LinkButton href="/free-audit" variant="light">Request a growth audit <ArrowRight size={15} /></LinkButton></div></div></section><SiteFooter /></main>; }
+export default function ServicesPage() {
+  return <ServicesPricingPage />;
+}

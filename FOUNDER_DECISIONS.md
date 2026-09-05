@@ -4,18 +4,18 @@ This register prevents unresolved commercial and operational choices from becomi
 
 ## 1. Initial pricing
 
-**Status:** Founder testing in progress. No price is approved for public display.
+**Status:** Resolved for the initial public offer ladder on September 5, 2026. The founder approved the following public prices: Growth Snapshot — Free; Growth Blueprint — $350 one-time; Local Growth Foundation — starting at $1,500; Growth Website System — founding-client projects starting at $2,250; Local Growth — starting at $750/month; Growth Partner — starting at $1,250/month.
 
-1. **Decision required:** Pricing model and investment for the Local Growth Foundation Sprint.
+1. **Decision required:** Approved public starting prices are now implemented. Future decisions include deposits, payment schedules, scope boundaries, and when founding-client pricing ends.
 2. **Why it matters:** Determines qualification, sales expectations, scope discipline, capacity, and public offer copy.
 3. **Recommended options:** Fixed fee after a consistent scope; tiered fixed fee by business complexity; paid diagnostic credited toward later implementation.
 4. **Pros/cons:** Fixed pricing is clear but requires stable scope. Tiers handle complexity but can confuse buyers. A credited diagnostic lowers perceived duplication but can pressure implementation economics.
-5. **Engineering/product recommendation:** Stabilize one repeatable Sprint scope with 3–5 real deliveries before publishing a fixed public price. Store the approved display value in `lib/offers/local-growth-foundation.ts`.
-6. **Blocked implementation:** Public pricing, payment collection, price-based form qualification, and proposal totals.
+5. **Engineering/product recommendation:** Keep every public display value centralized in `lib/offers/growth-services.ts`, test the prices in real sales conversations, and revise them only through a documented founder decision.
+6. **Blocked implementation:** No public pricing is blocked. Payment collection, deposits, detailed proposal totals, and price-based qualification still depend on scope and provider decisions.
 
-## 2. Exact Sprint duration
+## 2. Exact project duration
 
-1. **Decision required:** Calendar duration and founder/team capacity per Sprint.
+1. **Decision required:** Calendar duration and founder/team capacity for each project-based offer.
 2. **Why it matters:** Sets expectations, evidence requests, meeting cadence, and delivery scheduling.
 3. **Recommended options:** Fixed calendar window; milestone-based delivery; a narrow standard with an extended-complexity path.
 4. **Pros/cons:** Fixed windows are easy to sell but vulnerable to client delays. Milestones are accurate but less predictable. Complexity paths add flexibility but operational overhead.
@@ -34,7 +34,7 @@ This register prevents unresolved commercial and operational choices from becomi
 ## 4. Qualification thresholds
 
 1. **Decision required:** Minimum readiness, business maturity, marketing investment, access, authority, and timing requirements.
-2. **Why it matters:** Determines which applications deserve founder time and which clients can benefit from the Sprint.
+2. **Why it matters:** Determines which requests deserve founder time and which clients can benefit from a paid diagnostic or implementation project.
 3. **Recommended options:** Human review rubric; explicit point threshold; disqualifying conditions plus human judgment.
 4. **Pros/cons:** Human review preserves nuance but consumes time. Point systems scale but create false precision. Disqualifiers are simple but may reject unconventional good fits.
 5. **Engineering/product recommendation:** Begin with disqualifying conditions and a documented human review; do not implement automatic scoring yet.
@@ -73,7 +73,7 @@ This register prevents unresolved commercial and operational choices from becomi
 2. **Why it matters:** Affects proposal acceptance, cash flow, bookkeeping, refunds, and client onboarding.
 3. **Recommended options:** Stripe invoices; QuickBooks invoices; contract/proposal platform payments; manual ACH for pilots.
 4. **Pros/cons:** Stripe is flexible but adds fees and configuration. QuickBooks centralizes accounting but may have weaker sales UX. Proposal platforms simplify acceptance but add another vendor. ACH reduces fees but is manual.
-5. **Engineering/product recommendation:** Select alongside the accounting workflow; do not build custom checkout for a consultative Sprint.
+5. **Engineering/product recommendation:** Select alongside the accounting workflow; do not build custom checkout for consultative project work.
 6. **Blocked implementation:** Payment links, deposit status, automated onboarding triggers, and closed-client reconciliation.
 
 ## 9. Contract and service-agreement structure
@@ -97,17 +97,19 @@ This register prevents unresolved commercial and operational choices from becomi
 ## 11. Guarantee or risk-reversal policy
 
 1. **Decision required:** Whether any scope, satisfaction, process, or conditional risk reversal is appropriate.
-2. **Why it matters:** Affects trust, sales objections, delivery exposure, and legal language.
+2. **Why it matters:** Affects trust, sales objections, delivery exposure, and legal language across every offer.
 3. **Recommended options:** No guarantee; process/scope commitment; conditional remediation of missed agreed deliverables; limited satisfaction checkpoint.
 4. **Pros/cons:** No guarantee is safest but may reduce confidence. Process commitments are controllable but less dramatic. Remediation can build trust but must be tightly defined. Satisfaction promises are subjective.
 5. **Engineering/product recommendation:** Do not guarantee rankings, leads, or revenue. Consider only attorney-reviewed commitments tied to controllable deliverables after pilot experience.
 6. **Blocked implementation:** Risk-reversal copy, proposal clauses, and FAQ changes.
 
-## 12. Ongoing-retainer structure
+## 12. Ongoing service structure
+
+**Status:** Public starting prices and the two ongoing service levels are approved. Exact recurring scope, cadence, qualification, capacity, and service boundaries remain in validation.
 
 1. **Decision required:** What ongoing optimization includes, who qualifies, cadence, capacity, and commercial model.
 2. **Why it matters:** Determines recurring revenue without turning Lumina into an unfocused task vendor.
-3. **Recommended options:** Measurement and optimization retainer; channel-specific implementation; quarterly growth advisory; project-based follow-on work.
+3. **Recommended options:** Local Growth for focused execution and optimization; Growth Partner for broader strategic partnership; project-based follow-on work when recurring service is not justified.
 4. **Pros/cons:** Retainers improve continuity but risk scope creep. Channel-specific work is clearer but recreates silos. Advisory is high leverage but depends on client execution. Projects preserve focus but reduce recurring revenue.
-5. **Engineering/product recommendation:** Offer ongoing support only after a Sprint establishes priorities, baseline, ownership, and justified recurring work.
-6. **Blocked implementation:** Public packages, recurring billing, service-level expectations, and retention forecasting.
+5. **Engineering/product recommendation:** Offer ongoing support only after a Snapshot, Blueprint, Foundation, or Website project establishes priorities, baseline, ownership, and justified recurring work. Keep the website honest that Local Growth is actively being refined.
+6. **Blocked implementation:** Detailed scope promises, recurring billing, service-level expectations, capacity rules, and retention forecasting. The public service levels and starting prices are no longer blocked.

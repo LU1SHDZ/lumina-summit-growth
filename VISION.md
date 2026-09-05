@@ -62,15 +62,22 @@ Internal creative direction: **Illuminate the path. Climb together. Grow with pu
 
 The brand should feel sophisticated, warm, ambitious, trustworthy, modern, human, intelligent, culturally grounded, and premium without pretension. Mexican-inspired influence should remain subtle, thoughtful, and non-stereotypical.
 
-## Initial offer
+## Initial commercial system
 
-The working initial offer is the **Local Growth Foundation Sprint**: a focused engagement that diagnoses growth constraints across local visibility, website conversion, lead handling, reputation, measurement, CRM readiness, and responsible automation, culminating in a prioritized growth roadmap.
+Lumina uses a deliberate offer ladder rather than a disconnected menu of marketing tactics:
 
-Pricing, exact duration, qualification thresholds, and ongoing commercial structure remain founder decisions. Never fabricate them.
+- **Growth Snapshot — Free:** a focused first look that identifies visible growth friction and the most appropriate next conversation.
+- **Growth Blueprint — $350 one-time:** a paid diagnostic with a prioritized, evidence-backed action plan.
+- **Local Growth Foundation — starting at $1,500:** focused implementation of the systems required to improve acquisition, conversion, follow-up, and measurement.
+- **Growth Website System — founding-client projects starting at $2,250:** a conversion-focused website engagement with limited founding-client pricing while the delivery system is refined.
+- **Local Growth — starting at $750/month:** focused ongoing implementation and optimization, currently being refined through early delivery.
+- **Growth Partner — starting at $1,250/month:** a broader ongoing strategic and execution partnership.
+
+Exact project durations, deposits, detailed scope boundaries, qualification thresholds, provider choices, and service-level expectations remain founder decisions. Never fabricate them.
 
 ## Customer journey
 
-Targeted outreach / referral / organic discovery → industry landing page → growth audit application → reviewed qualification → discovery call → diagnostic → proposal → Local Growth Foundation Sprint → measurement → ongoing optimization → documented case study / referral / expanded engagement.
+Targeted outreach / referral / organic discovery → Growth Snapshot request → reviewed qualification → discovery conversation → Growth Blueprint → Local Growth Foundation or Growth Website System → measurement → optional Local Growth or Growth Partner engagement → documented case study / referral / expanded engagement.
 
 Every public page and internal workflow should support a defined stage of this journey.
 

@@ -30,8 +30,8 @@ export function SiteHeader({ dark = true, locale = "en" }: { dark?: boolean; loc
   const tone = dark ? "text-cream" : "text-charcoal";
   const navTone = dark ? "text-cream/80 hover:text-gold" : "text-charcoal/80 hover:text-terracotta";
   const copy = locale === "es"
-    ? { main: "Navegación principal", mobile: "Navegación móvil", home: "Inicio de Lumina Summit Growth", apply: "Solicita una Auditoría", open: "Abrir menú", close: "Cerrar menú" }
-    : { main: "Main navigation", mobile: "Mobile navigation", home: "Lumina Summit Growth home", apply: "Apply for an Audit", open: "Open menu", close: "Close menu" };
+    ? { main: "Navegación principal", mobile: "Navegación móvil", home: "Inicio de Lumina Summit Growth", apply: "Diagnóstico Gratuito", open: "Abrir menú", close: "Cerrar menú" }
+    : { main: "Main navigation", mobile: "Mobile navigation", home: "Lumina Summit Growth home", apply: "Free Growth Snapshot", open: "Open menu", close: "Close menu" };
 
   function isCurrent(href: string) {
     if (href.includes("#")) return false;

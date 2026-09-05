@@ -12,6 +12,7 @@ This checklist separates work that is technically ready from decisions and integ
 - [x] Automated tests, linting, type validation, and production build command
 - [x] Baseline response headers for framing, content-type sniffing, referrers, camera, microphone, and geolocation
 - [x] Clearly labeled prototype work without fabricated outcomes
+- [x] Founder-approved offer ladder, public starting prices, pricing philosophy, and service FAQ
 
 ## Required before accepting public applications
 
@@ -36,8 +37,8 @@ This checklist separates work that is technically ready from decisions and integ
 
 ## Founder approval required before implementation
 
-- [ ] Public Sprint price, pricing presentation, and any deposit language
-- [ ] Published Sprint duration or delivery calendar
+- [ ] Deposit and payment-schedule language
+- [ ] Published project durations or delivery calendars
 - [ ] Geographic territory claims or location landing pages
 - [ ] Automatic qualification thresholds or scoring
 - [ ] CRM, scheduling, analytics, payment, proposal, or contract provider
@@ -51,8 +52,8 @@ This checklist separates work that is technically ready from decisions and integ
 - [ ] Record where applicants hesitate, abandon, misunderstand, or need clarification
 - [ ] Compare the submitted context with what is actually useful during the first conversation
 - [ ] Revise questions only when the review identifies a repeatable problem
-- [ ] Keep pricing-test notes separate until the founder approves a publishable model
+- [ ] Record objections and qualification patterns for each approved public starting price
 
 ## Definition of launch-ready
 
-The site is launch-ready when a real visitor can discover the offer, submit an application in either language, receive an honest success or failure state, and enter an owned response process with tested delivery and monitoring. Pricing does not need to be public, but every published claim and enabled provider must be accurate.
+The site is launch-ready when a real visitor can discover the offer and approved starting prices, submit an application in either language, receive an honest success or failure state, and enter an owned response process with tested delivery and monitoring. Every published claim and enabled provider must be accurate.
