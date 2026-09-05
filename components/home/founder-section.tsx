@@ -1,44 +1,33 @@
-import Image from "next/image";
 import Link from "next/link";
+import { FounderPhotoCollage } from "@/components/founder/founder-photo-collage";
 import type { Locale } from "@/lib/i18n";
 import { localizedPath } from "@/lib/i18n";
 
 export function FounderSection({ locale = "en" }: { locale?: Locale }) {
   const copy = locale === "es" ? {
     eyebrow: "Conoce al fundador / Luis Hernandez",
-    title: "Crecimiento guiado por servicio, curiosidad y responsabilidad.",
-    story: "Luis está construyendo Lumina sobre una convicción sencilla: la experiencia debe ayudar a los dueños a ver el camino con claridad, no hacerlos depender de más ruido. Como fundador hispano, está formando una compañía moderna en sus herramientas, humana en su criterio y responsable por la utilidad de su trabajo.",
+    title: "La ambición de crecer. La responsabilidad de servir.",
+    story: "Lumina comenzó con una pregunta que Luis sigue haciéndose: ¿qué se vuelve posible cuando las personas ambiciosas finalmente pueden ver con claridad el camino frente a ellas? Como fundador hispano, está construyendo una compañía con la convicción de que la estrategia sofisticada y la tecnología moderna también deben estar al alcance de los negocios locales que crean empleos, sostienen familias y fortalecen comunidades.",
     quote: "No para ser servido, sino para servir.",
     principles: [["01", "Escuchar antes de prescribir"], ["02", "Decir la verdad, incluso cuando signifique recomendar menos"], ["03", "Probar, medir, aprender y mejorar"]],
     perspective: "Lee la perspectiva fundacional →",
     contact: "Inicia una conversación →",
     linkedin: "Conecta en LinkedIn ↗",
-    panel: "Fundador hispano · Servicio primero · English + Español",
   } : {
     eyebrow: "Meet the founder / Luis Hernandez",
-    title: "Growth guided by service, curiosity, and accountability.",
-    story: "Luis is building Lumina on a straightforward conviction: expertise should help owners see the path clearly, not make them dependent on more noise. As a Hispanic founder, he is shaping a company that is modern in its tools, human in its judgment, and accountable for whether the work is genuinely useful.",
+    title: "The ambition to grow. The responsibility to serve.",
+    story: "Lumina began with a question Luis keeps returning to: what becomes possible when ambitious people can finally see the path in front of them? As a Hispanic founder, he is building a company on the belief that sophisticated strategy and modern technology should also be within reach of the local businesses that create jobs, support families, and strengthen communities.",
     quote: "Not to be served, but to serve.",
     principles: [["01", "Listen before prescribing"], ["02", "Tell the truth, even when it means recommending less"], ["03", "Test, measure, learn, and improve"]],
     perspective: "Read the founding perspective →",
     contact: "Start a conversation →",
     linkedin: "Connect on LinkedIn ↗",
-    panel: "Hispanic founder · Service first · English + Español",
   };
 
   return (
     <section id="founder" className="scroll-mt-6 bg-[#eee7d9] px-6 py-24 lg:px-8 lg:py-32">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-        <div className="relative aspect-[4/3] overflow-hidden bg-[#071014] shadow-[12px_12px_0_#C89B3C] lg:aspect-[4/5]">
-          <Image
-            src="/images/brand/lumina-summit-growth-logo.png"
-            alt="Lumina Summit Growth logo featuring an illuminated mountain, golden-ratio spiral, and geometric detailing"
-            fill
-            sizes="(min-width: 1024px) 36vw, 100vw"
-            className="object-contain p-5 sm:p-8"
-          />
-          <p className="absolute inset-x-5 bottom-5 border-t border-gold/25 pt-4 text-[0.6rem] font-semibold uppercase tracking-[0.17em] text-cream/60 sm:inset-x-8 sm:bottom-8">{copy.panel}</p>
-        </div>
+        <FounderPhotoCollage locale={locale} />
 
         <div className="lg:pl-8">
           <p className="eyebrow">{copy.eyebrow}</p>
